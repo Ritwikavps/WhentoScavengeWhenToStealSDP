@@ -3,6 +3,8 @@ This repository contains code written by RVPS for the simulations, data analysis
 
 The directory **SDPCode** contains the main simulation code; **CodeForFigs** contains the code written to analyse simulation resuls and generate figs in the main text (in the directory *AnalysisOfResultsAndMainFigs), as well as figs in the supplementary material (in the directory *SuppInfoFigs*); and **SensitivityAnalyses** contains code used to run sensitivity analyses and plot the results of these analyses, as reported in the supplementary material.
 
+Finally, **ObsData** contains all observational data presented in the manuscript. This is relevant to Figs. 3, 4, and 5 in the main text. 
+
 All code was written in MATLAB, and each directory contains its won README with relevant details. 
 
 
