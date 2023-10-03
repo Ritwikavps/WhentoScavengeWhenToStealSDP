@@ -5,4 +5,6 @@ in the main text and generate the corresponding fig. Note that I have chosen to 
 
 In addition, in generating Fig 5 (.m file prefixed with A5), the script will also generate the supplementary figure S22.
 
+<ins>All observational data presented in the manuscript are present in the directory **ObsData** in the master repo. This is relevant to Figs. 3, 4, and 5 in the main text. Please make sure to edit the relevant path to the files in the **ObsData** directory accordingly</ins>
+
 More details can be found in the relevant .m files.
