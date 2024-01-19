@@ -1,0 +1,1 @@
+This directory contains code written by JY to compute the probability of exclusive scavenging as described in Results and Appendix S4. Results from this analysis are presented in Fig. 5 in the main text as well as Fig. S12 in the Appendix.
