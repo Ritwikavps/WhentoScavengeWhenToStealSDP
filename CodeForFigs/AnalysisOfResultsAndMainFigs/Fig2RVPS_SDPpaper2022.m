@@ -1,9 +1,22 @@
 function Fig2RVPS_SDPpaper2022(DecCts_H_mean,DecCts_Scav_mean,DecCts_St_mean,SEI,HuntScavMin,HuntScavMax)
 
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------
+% PLEASE NOTE that this function requires the perceptually uniform colormaps functions by Ander Biguri 
+% (linked here: https://www.mathworks.com/matlabcentral/fileexchange/51986-perceptually-uniform-colormaps?s_tid=mwa_osa_a).
+% The version used in this function is v 1.3.2. Please make sure that this suite of functions is downloaded and in your path.
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%generate perpetually uniform colormaps
+N_Colmap = 256;
+cm_magma=magma(N_Colmap);
+cm_inferno=inferno(N_Colmap);
+cm_plasma=plasma(N_Colmap);
+cm_viridis=viridis(N_Colmap);
+
 %Create figure
 figure1 = figure('PaperUnits','centimeters','PaperType','<custom>',...
     'PaperSize',[36 23.8],'Color',[1 1 1]);
-colormap(jet);
+colormap(cm_viridis);
 
 % Create axes
 axes1 = axes('Position',[0.164208456243855 0.601420179373715 0.302331724322875 0.31407125418636]);
@@ -12,7 +25,8 @@ hold(axes1,'on');
 surf(transpose(log10(DecCts_H_mean)),'EdgeColor','none');
 %labels
 ylabel('Fraction of','FontSize',33,'FontName','Helvetica Neue');
-title('A');
+title('(a)');
+                                                                                    
 %other axes stuff
 grid(axes1,'on'); axis(axes1,'tight'); 
 hold(axes1,'off');
@@ -27,7 +41,8 @@ hold(axes2,'on');
 surf(transpose(log10(DecCts_Scav_mean)),'EdgeColor','none');
 %labels
 xlabel('Time','FontSize',33,'FontName','Helvetica Neue');
-title('B');
+title('(b)');
+                                                                                    
 %other axis stuff
 grid(axes2,'on');
 axis(axes2,'tight');
@@ -46,7 +61,7 @@ hold(axes3,'on');
 surf(transpose(log10(DecCts_St_mean)),'EdgeColor','none');
 %labels
 ylabel('$x_{\rm max}$','FontSize',33,'FontName','Helvetica Neue','Interpreter','latex');
-title('C');
+title('(c)');
 %other axis stuff
 grid(axes3,'on');
 axis(axes3,'tight');
@@ -64,10 +79,10 @@ hold(axes4,'on');
 %plotting
 surf(transpose(SEI),'EdgeColor','none');
 %labels
-title('D');
+title('(d)');
 %Other axis stuff
 axis(axes4,'tight');
-colormap(axes4, copper)
+colormap(axes4, cm_inferno)
 hold(axes4,'off');
 set(axes4,'CLim',[min(SEI(:)) max(SEI(:))],...
     'FontSize',30,'XTick',1,'XTickLabel',{'1'},'YTick',zeros(1,0));
@@ -185,7 +200,7 @@ annotation(figure1,'textbox',...
 % Create textbox
 annotation(figure1,'textbox',...
     [0.649967223861038 0.427378378378381 0.248279252704032 0.1],'Color',[1 1 1],...
-    'String',{'Hunting-dominant','strategy'},...
+    'String',{'Hunting-','dominant'},...
     'LineStyle','none',...
     'HorizontalAlignment','right',...
     'FontSize',27,...
@@ -194,7 +209,7 @@ annotation(figure1,'textbox',...
 % Create textbox
 annotation(figure1,'textbox',...
     [0.598820058997059 0.17737837837838 0.247295968534907 0.1],...
-    'String',{'Jack-of-','all-trades strategy'},...
+    'String',{'Jack-of-','all-trades'},...
     'LineStyle','none',...
     'FontSize',27,...
     'FontName','Helvetica Neue');

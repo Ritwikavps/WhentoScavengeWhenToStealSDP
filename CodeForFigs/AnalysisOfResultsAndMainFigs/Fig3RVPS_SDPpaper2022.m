@@ -1,8 +1,22 @@
 function Fig3RVPS_SDPpaper2022(BasePath, Mp, Mr, Mc, FracH_p_mean, FracScav_p_mean, FracKlep_p_mean, FracH_r_mean, FracScav_r_mean, FracKlep_r_mean,...
     FracH_c_mean, FracScav_c_mean, FracKlep_c_mean, FracH_rp_mean, FracScav_rp_mean, FracKlep_rp_mean)
 
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------
+% PLEASE NOTE that this function requires the perceptually uniform colormaps functions by Ander Biguri 
+% (linked here: https://www.mathworks.com/matlabcentral/fileexchange/51986-perceptually-uniform-colormaps?s_tid=mwa_osa_a).
+% The version used in this function is v 1.3.2. Please make sure that this suite of functions is downloaded and in your path.
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%generate perpetually uniform colormaps
+N_Colmap = 256;
+cm_magma=magma(N_Colmap);
+cm_inferno=inferno(N_Colmap);
+cm_plasma=plasma(N_Colmap);
+cm_viridis=viridis(N_Colmap);
+
 % Create figure
 figure1 = figure('PaperUnits','centimeters','PaperType','<custom>','PaperSize',[36 34.3],'Color',[1 1 1]);
+colormap(cm_viridis);
 
 %subplot A: prop of strategy as a fn of Mp
 % Create axes
