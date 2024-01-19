@@ -7,7 +7,7 @@ Finally, **ObsData** contains all observational data presented in the manuscript
 
 All code was written in MATLAB, and each directory contains its own README with relevant details. 
 
-# Additional notes associated with manuscript revisions (Jan 2024)
+## Additional notes associated with manuscript revisions (Jan 2024)
 
 1. The functions required to generate Figs. 2 and 3 in the main text have been revised to utilise viridis-inspired colormaps so as to be more accesible to readers who are colour-blind. As such, you will need to have the suite of functions linked here (https://www.mathworks.com/matlabcentral/fileexchange/51986-perceptually-uniform-colormaps?s_tid=mwa_osa_a) downloaded and in the MATLAB path. We have chosen not to provide these functions in this reporsitory since they were written and licensed by other authors. We also note that we utilised version  1.3.2 of this suite of functions.
 2. Please note that all references in the code and comments to fitness (eg. fitness function, fitness maximisation, etc.) point to the survival-maximisation procedure mentioned in the manuscript.
