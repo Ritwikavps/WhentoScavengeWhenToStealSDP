@@ -5,7 +5,7 @@ The directory **SDPCode** contains the main simulation code; **CodeForFigs** con
 
 Finally, **ObsData** contains all observational data presented in the manuscript. This is relevant to Figs. 3, 4, and 5 in the main text. 
 
-All code was written in MATLAB, and each directory contains its won README with relevant details. 
+All code was written in MATLAB, and each directory contains its own README with relevant details. 
 
 # Additional notes associated with manuscript revisions (Jan 2024)
 
